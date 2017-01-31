@@ -1,6 +1,6 @@
 {
   "name": "iron-views",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "iron-views was forked from iron-pages to better support Electron's webviews",
   "main": "index.html",
   "directories": {
