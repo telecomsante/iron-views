@@ -1,21 +1,18 @@
 {
-  "name": "iron-pages",
-  "version": "1.0.8",
+  "name": "iron-views",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "description": "Organizes a set of pages and shows one at a time",
-  "main": "iron-pages.html",
+  "description": "Organizes a set of views and shows one at a time",
+  "main": "iron-views.html",
   "private": true,
   "authors": [
-    "The Polymer Authors"
+    "Télécom Santé"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/PolymerElements/iron-pages.git"
-  },
+  "repository": "https://github.com/telecomsante/iron-views.git",
   "keywords": [
     "web-components",
     "polymer",
-    "container"
+    "container",
+    "webviews"
   ],
   "dependencies": {
     "iron-resizable-behavior": "polymerelements/iron-resizable-behavior#^1.0.0",
@@ -30,5 +27,7 @@
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "ignore": []
+  "ignore": [
+    "package.json"
+  ]
 }

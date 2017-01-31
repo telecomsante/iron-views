@@ -1,31 +1,13 @@
+#&lt;iron-views&gt;
 
-<!---
+`iron-views` is directly derived from [Polymer's iron-pages](https://github.com/PolymerElements/iron-pages).
 
-This README is automatically generated from the comments in these files:
-iron-pages.html
+`iron-pages` was forked because it hides unselected pages by using `display: none` which is currently [not an option with Electron's webviews](http://electron.atom.io/docs/api/web-view-tag/#css-styling-notes)
 
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
-
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
-
--->
-
-[![Build status](https://travis-ci.org/PolymerElements/iron-pages.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-pages)
-
-_[Demo and API docs](https://elements.polymer-project.org/elements/iron-pages)_
-
-
-##&lt;iron-pages&gt;
-
-`iron-pages` is used to select one of its children to show. One use is to cycle through a list of
-children "pages".
-
-Example:
+The Example remains the same as for `iron-pages`:
 
 ```html
-<iron-pages selected="0">
+<iron-views selected="0">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>
@@ -33,8 +15,8 @@ Example:
 
 <script>
   document.addEventListener('click', function(e) {
-    var pages = document.querySelector('iron-pages');
-    pages.selectNext();
+    var views = document.querySelector('iron-views');
+    views.selectNext();
   });
 </script>
 ```

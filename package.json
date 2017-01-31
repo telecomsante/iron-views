@@ -1,0 +1,35 @@
+{
+  "name": "iron-views",
+  "version": "1.1.0",
+  "description": "iron-views was forked from iron-pages to better support Electron's webviews",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "pretest": "npm install",
+    "test": "polymer test",
+    "start": "polymer serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telecomsante/iron-views.git"
+  },
+  "keywords": [
+    "web-components",
+    "polymer",
+    "container",
+    "webviews"
+  ],
+  "author": "Télécom Santé",
+  "license": "SEE LICENSE IN http://polymer.github.io/LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/telecomsante/iron-views/issues"
+  },
+  "homepage": "https://github.com/telecomsante/iron-views#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "polymer-cli": "^0.17.0"
+  }
+}

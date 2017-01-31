@@ -12,7 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
 <head>
 
-  <title>iron-pages demo</title>
+  <title>iron-views demo</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
@@ -23,48 +23,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../paper-styles/color.html">
   <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
   <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../iron-pages.html">
+  <link rel="import" href="../iron-views.html">
 
   <style is="custom-style" include="demo-pages-shared-styles"></style>
 </head>
 <body unresolved>
   <div class="vertical-section-container centered">
-    <h3>iron-pages shows only one of its children at a time.</h3>
+    <h3>iron-views shows only one of its children at a time.</h3>
     <demo-snippet>
       <template>
         <style is="custom-style">
-          iron-pages {
+          iron-views {
             width: 100%;
             height: 200px;
             font-size: 50px;
             color: white;
             text-align: center;
           }
-          iron-pages div {
+          iron-views div {
             width: 100%;
             height: 100%;
             padding: 80px 0;
           }
-          iron-pages div:nth-child(1) {
+          iron-views div:nth-child(1) {
             background-color: var(--google-blue-500);
           }
-          iron-pages div:nth-child(2) {
+          iron-views div:nth-child(2) {
             background-color: var(--google-red-500);
           }
-          iron-pages div:nth-child(3) {
+          iron-views div:nth-child(3) {
             background-color: var(--google-green-500);
           }
         </style>
         <p>Click on a page to advance to the next one.</p>
-        <iron-pages selected="0">
+        <iron-views selected="0">
           <div>One</div>
           <div>Two</div>
           <div>Three</div>
-        </iron-pages>
+        </iron-views>
         <script>
-          var pages = document.querySelector('iron-pages');
-          pages.addEventListener('click', function(e) {
-            pages.selectNext();
+          var views = document.querySelector('iron-views');
+          views.addEventListener('click', function(e) {
+            views.selectNext();
           });
         </script>
       </template>
