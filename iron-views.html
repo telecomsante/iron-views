@@ -13,30 +13,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-selector/iron-selectable.html">
 
 <!--
-`iron-pages` is used to select one of its children to show. One use is to cycle through a list of
-children "pages".
+`iron-views` is directly derived from [Polymer's iron-pages](https://github.com/PolymerElements/iron-pages).
 
-Example:
+`iron-pages` was forked because it hides unselected pages by using `display: none` which is currently [not an option with Electron's webviews](http://electron.atom.io/docs/api/web-view-tag/#css-styling-notes)
 
-    <iron-pages selected="0">
+The Example remains the same as for `iron-pages`:
+
+    <iron-views selected="0">
       <div>One</div>
       <div>Two</div>
       <div>Three</div>
-    </iron-pages>
+    </iron-views>
 
     <script>
       document.addEventListener('click', function(e) {
-        var pages = document.querySelector('iron-pages');
-        pages.selectNext();
+        var views = document.querySelector('iron-views');
+        views.selectNext();
       });
     </script>
 
-@group Iron Elements
-@hero hero.svg
 @demo demo/index.html
 -->
 
-<dom-module id="iron-pages">
+<dom-module id="iron-views">
 
   <template>
     <style>
@@ -45,7 +44,10 @@ Example:
       }
 
       :host > ::content > :not(.iron-selected) {
-        display: none !important;
+        max-width: 0px !important;
+        max-height: 0px !important;
+        padding: 0px !important;
+        overflow: hidden !important;
       }
     </style>
 
@@ -55,7 +57,7 @@ Example:
   <script>
     Polymer({
 
-      is: 'iron-pages',
+      is: 'iron-views',
 
       behaviors: [
         Polymer.IronResizableBehavior,
